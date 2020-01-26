@@ -1,0 +1,233 @@
+/* 全体の設定 */
+body,td,th{
+font-size:14px;
+color:#666666;
+font-family : Verdana,Osaka,,'MS P Gothic'"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS UI Gothic",serif;
+font-weight:normal;
+line-height:1.5em;
+margin:0px;
+padding:0px;
+background-color : #FFF;
+}
+
+/* スクロールバーの設定 */
+body,html{ 
+  scrollbar-face-color:#FFF;  scrollbar-highlight-color:#000;
+  scrollbar-shadow-color:#000;  scrollbar-darkshadow-color: #000;
+  scrollbar-arrow-color:#000;  scrollbar-track-color:#FFF;
+}
+
+ リンク設定  
+/* リンクの設定 */
+a {text-decoration:none;}
+a:link{text-decoration:none;color:#66aaaa;}
+a:visited{text-decoration:none;color:#66aaaa;}
+a:hover{text-decoration:none;color : #ccc;}
+
+ リスト設定  
+ul,ol{
+list-style-positioninside;
+margin0px 0px 0px 15px;
+} 
+
+ 画像のボーダーをあらかじめ０にする 
+img{bordernone;}
+
+ フォーム関連の設定 
+textarea{
+font-size11px;
+line-height17px;
+padding:5px;
+}
+textarea,input{
+color#666666;
+border1px solid #aaaaaa;
+background-color#ffffff;
+}
+
+/* ---横幅の設定ここから--- */
+
+@media only screen and (min-width:800px) {
+
+body {
+width: 750px;
+margin:15px auto;
+padding:20px;
+  }
+
+}
+@media only screen and (max-width:800px) {
+
+  body {
+margin: 15px auto;
+padding:20px;
+  }
+
+}
+
+/* ---横幅の設定ここまで--- */
+
+/* リスト設定 */ 
+ul,ol{
+list-style-position:inside;
+margin:0px 0px 0px 15px;
+} 
+
+/* 画像のボーダーをあらかじめ０にする */
+img{border:none;}
+
+/* フォーム関連の設定 */
+textarea{
+font-size:11px;
+line-height:17px;
+padding:5px;
+}
+textarea,input{
+color:#666666;
+border:1px solid #aaaaaa;
+background-color:#ffffff;
+}
+
+/* 装飾用box */
+.box1{
+border:2px solid #66aaaa;
+background-color:#ffffff;
+}
+.box2{
+background-color:#eeeedd;
+}
+.box3{
+background-color:#eeeeee;
+}
+.box4{
+border:1px solid #66aaaa;
+background-color:#ffffff;
+}
+.box1,.box2,.box3,.box4{margin:5px 5px 5px 10px;padding:5px;}
+
+/* デザイン全般設定 */
+.ta1{border-left:17px solid #eeeeee;border-right:17px solid #eeeeee;}
+.back{
+text-align:right;
+border-top:1px solid #cccccc;
+margin:20px 5px;
+padding:2px 5px;
+}
+
+/* 見出し設定 */
+h1{
+font-size:16px;
+font-weight:nomal;
+color:#000000;
+margin:0px;
+padding:5px 0px 2px 0px;
+}
+h1:first-letter{color:#66aaaa;}
+h2{
+font-size:16px;
+color:#666666;
+border-top:1px solid #cccccc;
+border-bottom:2px solid #cccccc;
+margin:25px -15px 10px -15px;
+padding:4px 8px;
+}
+h3{
+font-size:14px;
+font-weight:nomal;
+color:#ffffff;
+letter-spacing:2px;
+border-right:15px double #5f9ea0;
+background-color:#5f9ea0;
+width:270px;
+margin:5px 0px 5px 0px;
+padding:6px 10px;
+}
+
+h4 {
+font-size:12px;
+color: #fff;
+background-color: #009999;
+display: inline-block;
+position: relative;
+font-weight: bold;
+letter-spacing: 1px;
+min-width: 100px;
+margin: 0 5px 5px -5px;
+padding: 2px 18px 2px 10px;
+}
+
+h4::before,h4::after {
+content: '';
+position: absolute;
+}
+
+h4::after {
+top: 0;right: 0;
+z-index: 2;
+border-width: 14px 10px;
+border-style: solid;
+border-color: transparent;
+border-right-color: #fff;
+}k{
+font-weight:normal;
+background-color:#eeeeee;
+}
+m{
+font-weight:normal;
+color:#448888;
+}
+
+/* メニュー部分の設定 */
+#menu{
+text-align:left;
+}
+#menu ul{
+list-style:none;
+margin:0px -10px 0px -10px;
+padding:0px;
+}
+#menu li{
+display:inline;
+}
+#menu li a{
+display:block;
+color:#666666;
+background-color:#eeeeee;
+margin:5px 0px;
+padding:2px 10px 0px 20px;
+}
+#menu li a:hover{
+color:#ffffff;
+}
+
+/* テキスト設定 */
+.text1{
+}
+.text2{
+font-size:90%;
+color:#999999;
+line-height:17px;
+padding:5px 15px 10px 10px;
+}
+
+#waku{
+text-align : left;
+background-color:#ffffff;
+border:1px solid #aaa;
+border-top-left-radius: 20px; 
+border-bottom-right-radius: 20px;
+box-shadow:0 0 0 4px #ffffff;
+padding:20px;
+}
+
+ リンクページの設定  
+dl.banner{margin0px 0px 15px 0px;}
+dl.banner dt{floatleft;margin0px 5px 0px 0px;}
+dl.banner dd{margin-2px 0px 0px 0px;}
+
+ その他要素  
+em{font-stylenormal;font-weightbold;}
+strong{color#cc0000;background-color#ffcccc;}
+ins{text-decorationnone;border-bottom1px solid #ffaaaa;}
+del{text-decorationline-through;}
+

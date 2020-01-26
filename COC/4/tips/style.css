@@ -1,0 +1,149 @@
+
+/* 基本設定 */ 
+body,td,th{
+font-size:90%;  
+color:#333333;
+
+font-weight:normal;
+margin:0px;
+padding:0px;
+}
+
+/* スクロールバーの設定 */ 
+body,html{ 
+scrollbar-base-color:#000000;
+scrollbar-track-color:#000000;
+scrollbar-face-color:#339999;
+scrollbar-arrow-color:#339999;
+scrollbar-3dlight-color:#000000;
+scrollbar-darkshadow-color:#000000;
+scrollbar-highlight-color:#339999;
+scrollbar-shadow-color:#339999;
+}
+
+/* リンク設定 */ 
+a:link{text-decoration:none;color:#66aaaa;}/* リンクに触れる前の色 */ 
+a:visited{text-decoration:none; color:#66aaaa;}/* 訪問したことのあるリンクの色 */ 
+a:hover{text-decoration:none;color:#cccccc;}/* 触れた時のリンク設定 */ 
+
+/* リスト設定 */ 
+ul,ol{
+list-style-position:inside;
+margin:0px 0px 0px 15px;
+} 
+
+ /* 画像のボーダーをあらかじめ０にする */
+img{border:none;}
+
+/* フォーム関連の設定 */
+textarea{
+font-size:11px;
+line-height:17px;
+padding:5px;
+}
+textarea,input{
+color:#333333;
+border:1px dashed #666666;
+background-color:#ffffff;
+}
+
+/* 装飾用box */
+.box1{
+border:3px double #33aaaa;
+background-color:#ffffff;
+}
+.box2{
+border:1px dashed #33aaaa;
+background-color:#ccffff;
+}
+.box1,.box2{width:400px;margin:15px 0px 0px 0px;padding:5px;}
+
+/* 配布元リンク */
+#copyright{font-size:10px;color:#cccccc;margin:5px 0px 30px 10px;}
+#copyright a{color:#cccccc;}
+#copyright a:hover{color:#66aaaa;}
+
+/* デザイン全般設定 */
+.ta1{background:url(bg01.jpg) repeat-y 0% 100%;}
+.ta2{background-color:#000000;}
+body#enter_page{overflow:hidden;}
+body#menu_page{background-color:#000000;}
+body#left_page{background:url(bg01.jpg) repeat-y 0% 100% fixed;}
+
+/* 見出し設定 */ 
+h1{
+font-size:17px;
+color:#66aaaa;
+margin:0px;
+padding:25px 0px 0px 7px;
+}
+h2{
+font-size:11px;
+color:#000000;
+letter-spacing:2px;
+width:270px;
+border-style:solid;border-color:#000000;border-width:1px 1px 1px 0px;
+margin:25px 0px 0px 0px;
+padding:5px 15px;
+}
+h3{
+font-size:18px;
+color:#006666;
+text-decoration:underline;
+background:url(h.gif) no-repeat 0% 50%;
+margin:5px 10px;
+padding:0px 12px;
+}
+
+
+/* メニュー部分の設定 */
+#menu {
+text-align:center;
+}
+#menu ul{
+list-style:none;
+margin:0px;
+padding:0px;
+}
+#menu li{
+display:inline;
+}
+#menu li a{
+display:block;
+border:1px dashed #999999;
+margin:0px 23px 10px 10px;
+padding:4px 0px;
+}
+#menu li a:hover{
+border:1px dashed #333333;
+background-color:#66aaaa;
+}
+
+/* テキスト設定 */ 
+.text1,.text2{
+line-height:20px;
+margin:10px 50px 30px 10px;
+padding:1px 5px 0px 8px;
+}
+.text1{background-image:url(line.gif);}
+.text3{
+font-size:80%;
+color:#ffffff;
+line-height:18px;
+background-image:url(bg02.png);
+margin:0px 10px 0px 5px;
+padding:7px 3px 10px 6px;
+}
+* html .text3{filter:alpha(opacity=70);width:100%;background-color:#000000;}
+
+/* リンクページの設定 */ 
+dl.banner{margin:0px 0px 15px 0px;}
+dl.banner dt{float:left;margin:0px 5px 0px 0px;}
+dl.banner dd{margin:-2px 0px 0px 0px;}
+
+/* その他要素 */ 
+em{font-style:normal;font-weight:bold;}
+strong{color:#336666;background-color:#ccffff;}
+ins{text-decoration:none;border-bottom:1px solid #33aaff;}
+del{text-decoration:line-through;}
+
