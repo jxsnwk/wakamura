@@ -1,0 +1,117 @@
+/* ヘッダー */
+header{
+max-width:880px;
+margin: 0 auto;
+padding: 5px;
+}
+
+/* フッター */
+footer{
+max-width:880px;
+margin: 0 auto;
+}
+
+@media screen and (min-width:540px) {
+  .wrap {
+  display: flex;
+  max-width:900px;
+  margin:0px auto;
+  }
+
+  .navi {
+  width:220px;
+  padding:5px;
+  }
+
+  .contents {
+  flex: 1;
+  padding:5px;
+	}
+	.text {
+		display: flex;
+		flex-direction: column;
+	}
+  
+  /* メニュー部分の設定 */
+	.menu{
+	text-align:left;
+	list-style:none;
+	line-height:1.6em;
+	width:100%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 2px;
+	}
+
+	.menu li{
+	  margin:5px 0;
+	}
+
+	.menu li a{
+	  display:block;
+	}
+
+	.menu li a:hover{
+	display:block;
+	}
+
+	.sub li a{
+	  display:block;
+	  padding: 0;
+	}
+
+	.sub li a:hover{
+		padding: 0;
+	  }
+}
+
+@media screen and (max-width:540px) {
+  .wrap {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .navi {
+    width:100%;
+    margin: 0 auto;
+    }
+
+    .contents {
+    width:99%;
+    margin: 0 auto;
+    }
+    
+      /* メニュー部分の設定 */
+	.menu{
+	text-align:left;
+	list-style:none;
+	line-height:1.6em;
+	margin:0 auto;
+	}
+
+	.menu li{
+		width:48%;
+		border: 2px solid #fff;
+		display:inline-block;
+	}
+
+	.menu li a{
+		display:block;
+	}
+
+	ul.sub{
+		margin:0;
+		padding:0;
+		}
+
+	.sub li a{
+	  text-align:left;
+	  padding: 0;
+	}
+
+	.sub li a:hover{
+		padding: 0;
+	}
+
+
+}

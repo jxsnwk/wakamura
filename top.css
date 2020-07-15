@@ -1,0 +1,190 @@
+body {
+  color : #000;  /* 文字色 */
+  background-color : #FFF;  /* 背景色 */
+  font-size : 14px;  /* 文字の大きさ */
+  margin: 0;
+  padding: 0;
+}
+
+ul,li {
+margin:0;
+padding:0;
+}
+
+/* リンクの設定 */
+a {
+  color : #009999;  /* 文字色 */
+  text-decoration : none;
+}
+a:hover{
+  color : #ccc;  /* 文字色 */
+}
+
+/* シナリオ */
+.scenario a {
+  color : #009999;  /* 文字色 */
+  font-size : 16px;
+  text-decoration : none;
+}
+.scenario a:hover{
+  color : #ccc;  /* 文字色 */
+  font-size : 16px;
+}
+
+/* テキスト装飾 */
+.text{
+	border: 1px solid #999;
+	margin: 5px auto;
+	padding: 3%;
+}
+
+.attention{
+	color: #f00;
+}
+
+h1{
+margin:0;
+}
+
+h2{
+	color: #336666;
+	font-size: 12px;
+	margin:0;
+	padding: 0 5px 5px;
+}
+
+.excuse h2{
+	color: #336666;
+	font-size: 16px;
+	margin:0;
+	padding: 0 5px 5px;
+}
+
+/* ヘッダー */
+header{
+	max-width:880px;
+	margin: 0 auto;
+	padding: 5px;
+	}
+	
+	/* フッター */
+	footer{
+	max-width:880px;
+	margin: 0 auto;
+	}
+
+@media screen and (min-width:540px) {
+	.wrap {
+		display: flex;
+		max-width:900px;
+		margin:0px auto;
+		}
+	
+		.navi {
+		width:220px;
+		padding:5px;
+		}
+	
+		.contents {
+		flex: 1;
+		padding:5px;
+		}
+		
+	/* メニュー部分の設定 */
+	.menu{
+		text-align:left;
+		list-style:none;
+		line-height:1.6em;
+		width:100%;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 2px;
+		}
+
+	.menu li{
+		margin:5px 0;
+	}
+	
+	.menu li a{
+	  color:#FFF;
+		background-color:#009999;
+		padding:12px 10px 8px 20px;
+		display:block;
+	}
+
+	.menu li a:hover{
+	color:#FFF;
+	background-color:#44cccc;
+	display:block;
+	}
+
+	ul.sub{
+	  margin: 0 0 0 25px;
+	}
+
+	.sub li a{
+	  color:#009999;
+		background-color:#FFF;
+		padding:0;
+		display:block;
+	}
+
+	.sub li a:hover{
+	  color:#aaa;
+	  background-color:#FFF;
+		}
+		
+}
+
+@media screen and (max-width:540px) {
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		}
+	
+	.navi {
+		width:100%;
+		margin: 0 auto;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0px;
+		}
+
+		.contents {
+		width:99%;
+		margin: 0 auto;
+		}
+		
+	/* メニュー部分の設定 */
+	.menu{
+		text-align:left;
+		list-style:none;
+		line-height:1.6em;
+		width:100%;
+		display: flex;
+	}
+
+	.menu li{
+		margin:0;
+		flex:1;
+	}
+
+	.menu li a{
+		color:#FFF;
+		background-color:#009999;
+		padding:10px;
+		display:block;
+		text-align:center;
+	}
+
+	.menu li a:hover{
+		color:#FFF;
+		background-color:#44cccc;
+		display:block;
+	}
+
+	ul.sub{
+		display:none;
+	}
+
+}
