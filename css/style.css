@@ -2,7 +2,7 @@
 body,td,th{
 font-size:14px;
 color:#666;
-font-family : Verdana,Osaka,,'MS P Gothic'"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS UI Gothic",serif;
+font-family:"Sawarabi Mincho","Sawarabi Gothic",'Marcellus','Meiryo', serif;
 font-weight:normal;
 line-height:1.6em;
 margin:0px;
@@ -260,7 +260,7 @@ padding:20px;
 	border-color: transparent #ddd transparent transparent;
 }
 
- リンクページの設定  
+ /* リンクページの設定   */
 dl.banner{margin0px 0px 15px 0px;}
 dl.banner dt{floatleft;margin0px 5px 0px 0px;}
 dl.banner dd{margin-2px 0px 0px 0px;}
