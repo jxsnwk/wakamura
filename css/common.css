@@ -152,32 +152,33 @@ color:#448888;
 
 /* メニュー部分の設定 */
 .menu li a{
-	color:#666;
-	background-color:#eeeeee;
-	padding: 0 5px;
-	}
+color:#666;
+background-color:#eeeeee;
+padding: 0 5px;
+}
 	
-	.menu li a:hover{
-	color:#aaa;
-	background-color:#f4f4f4;
+.menu li a:hover{
+color:#aaa;
+background-color:#f4f4f4;
+}
+
+.menu li:last-child{
+text-align: right;
+}
+
+ul .sub li a{
+	margin-left: 5px;
+	padding-left: 20px;
+} 
+
+ul.sub li a:hover{
+	padding-left: 20px;
+	} 
+
+.sub li:last-child{
+	text-align: left;
 	}
 
-	.menu li:last-child{
-	text-align: right;
-	}
-	
-	ul .sub li a{
-		margin-left: 5px;
-		padding-left: 20px;
-	} 
-	
-	ul.sub li a:hover{
-		padding-left: 20px;
-		} 
-	
-	.sub li:last-child{
-		text-align: left;
-		}
 
 @media screen and (min-width:540px) {
 /* 540px以上 */
@@ -305,3 +306,22 @@ hr.dashline{
   margin: auto;
   text-align: center;
 }
+
+/*ライセンス表示*/
+.licence {
+	font-size: 9px;
+	color: #000;
+	text-align: left;
+	top: 0;
+	border-style: solid;
+	margin: 0 0 50px 0;
+	padding: 10px;
+}
+.licence:before {
+	white-space: pre-wrap;
+	content:"本シナリオは、「株式会社アークライト」及び「株式会社KADOKAWA」が権利を有する『クトゥルフ神話TRPG』の二次創作物です。\A"
+	"Call of Cthulhu is copyright (C)1981, 2015, 2019 by Chaosium Inc. ;all rights reserved. Arranged by Arclight Inc.\A"
+	"Call of Cthulhu is a registered trademark of Chaosium Inc.\A"
+	"PUBLISHED BY KADOKAWA CORPORATION";
+}
+
