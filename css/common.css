@@ -31,6 +31,10 @@ img{
 	max-width: 100%;
 	border:none;
 }
+img.w40{
+	max-width: 40%;
+	padding: 5px;
+}
 
 /* フォーム関連の設定 */
 textarea{
