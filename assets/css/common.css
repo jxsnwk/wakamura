@@ -1,0 +1,397 @@
+/* 全体の設定 */
+body,td,th{
+font-size:14px;
+color:#666;
+font-weight:normal;
+line-height:1.6em;
+margin:0px;
+padding:0px;
+background-color : #FFF;
+}
+
+ul,li {
+	margin:0;
+	padding:0;
+	list-style: none;
+	}
+
+/* リンクの設定 */
+a {text-decoration:none;}
+a:link{text-decoration:none;color:#66aaaa;}
+a:visited{text-decoration:none;color:#66aaaa;}
+a:hover{text-decoration:none;color : #ccc;}
+
+/* リスト設定  */
+ul,ol{
+list-style-position:inside;
+} 
+
+/* 画像のボーダーをあらかじめ０にする */
+img{
+	max-width: 100%;
+	border:none;
+}
+img.w40{
+	max-width: 40%;
+	padding: 5px;
+}
+
+/* フォーム関連の設定 */
+textarea{
+font-size:11px;
+line-height:17px;
+padding:5px;
+}
+textarea,input{
+color:#666;
+border:1px solid #aaa;
+background-color:#FFF;
+}
+
+/* 装飾用box */
+.box1{
+border:2px solid #66aaaa;
+background-color:#FFF;
+}
+.box2{
+background-color:#eeeedd;
+}
+.box3{
+background-color:#eeeeee;
+}
+.box4{
+border:1px solid #66aaaa;
+background-color:#FFF;
+}
+.box1,.box2,.box3,.box4{padding:5px 5px 5px 10px;}
+
+.tab1,td{
+font-size:12px;
+border:1px solid #aaa;
+}
+
+/* デザイン全般設定 */
+.ta1{border-left:17px solid #eeeeee;border-right:17px solid #eeeeee;}
+.back{
+text-align:right;
+border-top:1px solid #cccccc;
+margin:20px 5px;
+padding:2px 5px;
+}
+
+/* 見出し設定 */
+h1{
+	font-size:14px;
+}
+header h1{
+font-size:14px;
+font-weight:nomal;
+color:#336666;
+margin:5px 0 -10px 0;
+}
+h1:first-letter{color:#336666;}
+h2{
+font-size:16px;
+color:#666;
+border-top:1px solid #cccccc;
+border-bottom:2px solid #cccccc;
+width:98%;
+padding:4px 8px;
+}
+h3{
+font-size:14px;
+font-weight:nomal;
+color:#FFF;
+letter-spacing:2px;
+border-right:15px double #5f9ea0;
+background-color:#5f9ea0;
+width:270px;
+margin:5px 0px 5px 0px;
+padding:6px 10px;
+}
+
+h4 {
+font-size:12px;
+font-weight:nomal;
+color: #fff;
+background-color: #009999;
+display: inline-block;
+position: relative;
+font-weight: bold;
+letter-spacing: 1px;
+min-width: 100px;
+margin: 0 5px 5px -5px;
+padding: 2px 18px 2px 10px;
+}
+
+h4::before,h4::after {
+content: '';
+position: absolute;
+}
+
+h4::after {
+top: 0;right: 0;
+z-index: 2;
+border-width: 14px 10px;
+border-style: solid;
+border-color: transparent;
+border-right-color: #fff;
+}
+
+k{
+
+font-weight:normal;
+background-color:#eee;
+}
+
+.mark{
+	background-color:#eee;
+	display:inline;
+}
+
+m{
+font-weight:normal;
+color:#448888;
+}
+
+/* メニュー部分の設定 */
+details{
+	margin: 0 0 0 5px;
+	}
+	.menu li{
+	color:#666;
+	}
+	
+.menu li a{
+color:#666;
+background-color:#eeeeee;
+padding: 0 5px;
+}
+	
+.menu li a:hover{
+color:#aaa;
+background-color:#f4f4f4;
+}
+
+.menu li:last-child{
+text-align: right;
+}
+.menu li.left a{
+	text-align: left;
+	}
+
+ul .sub li a{
+	margin-left: 5px;
+	padding-left: 20px;
+} 
+
+ul.sub li a:hover{
+	padding-left: 20px;
+	} 
+
+.sub li:last-child{
+	text-align: left;
+	}
+
+
+@media screen and (min-width:540px) {
+/* 540px以上 */
+}
+
+@media screen and (max-width:540px) {
+
+}
+
+/* テキスト設定 */
+.text{
+ padding:5px 10px;
+}
+.text1{
+}
+.text2{
+font-size:90%;
+color:#999999;
+line-height:17px;
+padding:5px 15px 10px 10px;
+}
+.text3{
+	border: solid 1px #000;
+	padding: 10px;
+}
+
+.linenone td{
+	border: solid 0px #FFF;
+}
+
+#waku{
+text-align : left;
+background-color:#FFF;
+border:1px solid #aaa;
+border-top-left-radius: 20px; 
+border-bottom-right-radius: 20px;
+box-shadow:0 0 0 4px #FFF;
+padding:20px;
+max-width:680px;
+margin: 0 auto;
+}
+
+/* 吹き出し */
+#fu {
+	position: relative;
+	display: inline-block;
+	padding: 10 15px;
+	width: auto;
+	min-width: 120px;
+	color: #000;
+	text-align: center;
+	background: #ddd;
+	z-index: 0;
+}
+#fu:after {
+	content: "";
+	position: absolute;
+	top: 50%; left: -20px;
+	margin-top: -10px;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 20px 10px 0;
+	border-color: transparent #ddd transparent transparent;
+}
+
+.dash{
+	text-align:center;
+	border-top: 1px dashed #8c8c8c;
+	border-bottom: 1px dashed #8c8c8c;
+	margin:10px 15px;
+	padding:20px 0;
+}
+
+hr.dashline{
+	text-align:center;
+	border: none;
+	border-top: 1px dashed #8c8c8c;
+	margin:10px 15px;
+}
+
+.history{
+	font-size:8px;
+	text-align:right;
+	padding:20px 0;
+}
+
+/* 上へスクロール */
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #666;
+  opacity: 0.6;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a:hover{
+  background: #aaa;
+  opacity: 0.8;
+}
+
+#page_top a::before{
+  content: '▲';
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* ふりがなON/OFF */
+.toggle_input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	opacity: 0;
+	cursor: pointer;
+	}
+	.toggle_label {
+	width: 63px;
+	height: 30px;
+	background: #fff;
+	border: 2px solid #eee;
+	position: relative;
+	display: inline-block;
+	border-radius: 30px;
+	transition: 0.4s;
+	box-sizing: border-box;
+	}
+	.toggle_label:after {
+	text-align: center;
+	content: "OFF";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	left: 1px;
+	top: 1px;
+	z-index: 2;
+	background: #eee;
+	transition: 0.4s;
+	}
+	.toggle_input:checked + .toggle_label {
+	border: 2px solid #4BD865;
+	}
+	.toggle_input:checked + .toggle_label:after {
+	content: "ON";
+	color: #FFF;
+	left: 34px;
+	background: #4BD865;
+	}
+	.toggle_button {
+	position: relative;
+	text-align: right;
+	font-size: 50%;
+	margin: auto 5px;
+	}
+	.toggle_button::before {
+	content: "コピペ時ふりがな";
+	}
+
+	/*ライセンス表示*/
+.licence {
+	font-size: 9px;
+	color: #000;
+	text-align: left;
+	top: 0;
+	border-style: solid;
+	margin: 0 0 50px 0;
+	padding: 10px;
+}
+.licence:before {
+	white-space: pre-wrap;
+	content:"本シナリオは、「株式会社アークライト」及び「株式会社KADOKAWA」が権利を有する『クトゥルフ神話TRPG』の二次創作物です。\A"
+	"Call of Cthulhu is copyright (C)1981, 2015, 2019 by Chaosium Inc. ;all rights reserved. Arranged by Arclight Inc.\A"
+	"Call of Cthulhu is a registered trademark of Chaosium Inc.\A"
+	"PUBLISHED BY KADOKAWA CORPORATION";
+}
+
+/* ルビ */
+.rubyoff rt,.rubyon rt{ display: none }
