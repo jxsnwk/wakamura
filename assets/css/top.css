@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   color : #000;  /* 文字色 */
   background-color : #FFF;  /* 背景色 */
@@ -9,7 +13,9 @@ body {
 ul,li {
 margin:0;
 padding:0;
+list-style: none;
 }
+
 
 /* リンクの設定 */
 a {
@@ -18,17 +24,6 @@ a {
 }
 a:hover{
   color : #ccc;  /* 文字色 */
-}
-
-/* シナリオ */
-.scenario a {
-  color : #009999;  /* 文字色 */
-  font-size : 16px;
-  text-decoration : none;
-}
-.scenario a:hover{
-  color : #ccc;  /* 文字色 */
-  font-size : 16px;
 }
 
 /* テキスト装飾 */
@@ -43,148 +38,478 @@ a:hover{
 }
 
 h1{
-margin:0;
+	margin:0;
+}
+
+header h1{
+	font-size: 2.6rem;
 }
 
 h2{
-	color: #336666;
-	font-size: 12px;
+	color: #000;
+	font-size: 1.5rem;
+	font-weight: bold;
 	margin:0;
 	padding: 0 5px 5px;
 }
 
-.excuse h2{
-	color: #336666;
+h3 {
 	font-size: 16px;
-	margin:0;
-	padding: 0 5px 5px;
+	font-weight: bold;
 }
 
-/* ヘッダー */
-header{
-	max-width:880px;
-	margin: 0 auto;
-	padding: 5px;
-	}
+/* ヘッダーとフッター */
+/*---------------------------------------------------------------------------*/
+.top header {
+	color: #FFF;
+	width: 100%;
+	/* background-color: #009999; */
+	background: url('../img/top/top.jpg') no-repeat center center / cover;
+	animation: fadein 1s ease-out forwards;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	  }
 	
-	/* フッター */
-	footer{
-	max-width:880px;
+	  to {
+		opacity: 1;
+	  }
+  }
+
+.top header::before {
+	content: "";         /* 疑似要素に必須 */
+	width: 100%;         /* 幅いっぱい */
+	height: 100%;        /* 高さいっぱい */
+	display: block;      /* 高さを指定するためにブロック要素にする */
+	background: linear-gradient(rgba(255,255,255,0) 0, #fff 94%); /* 徐々に透明にする */
+	position: absolute;  /*  */
+	top: 0;
+	left: 0;
+}
+
+.top footer{
+	/* max-width:880px; */
 	margin: 0 auto;
+	min-height: 100px;
+	background-color: #000;
+}
+
+@media screen and (min-width:880px) {
+	.top header {
+		height: 80vh;
+		position: relative;
 	}
 
-@media screen and (min-width:540px) {
-	.wrap {
-		display: flex;
-		max-width:900px;
-		margin:0px auto;
-		}
+	.top header #logo {
+		position: absolute;
+		z-index: 1;
+		left: 10%;	/*左からの配置場所指定*/
+		top: 10%;	/*上からの配置場所指定*/
+		transform: rotate(-10deg);
+		width: 30%;
+	}
+}
+
+@media screen and (max-width:880px) {
+	.top header {
+		position: absolute;
+		z-index: -100;
+		height: 200px;
+	}
 	
-		.navi {
+	.top header #logo {
+		position: absolute;
+		z-index: 1;
+		left: 6%;
+		top: 10%;
+	}
+
+	.top footer{
+		min-width:100%;
+	}
+}
+
+/*mainブロックの設定*/
+main {
+	flex: 1;
+}
+
+
+/*メニュー*/
+/*---------------------------------------------------------------------------*/
+#menu-btn-check {
+    display: none;
+}
+
+.menu {
+	color: #fff;
+}
+
+
+/*画面幅が880以上--------------------------------------*/
+@media screen and (min-width:880px) {
+	.menu {
+		position: absolute;
+		right: 5%;
+		top: 10%;
 		width:220px;
 		padding:5px;
-		}
-	
-		.contents {
-		flex: 1;
-		padding:5px;
-		}
-		
-	/* メニュー部分の設定 */
-	.menu{
-		text-align:left;
-		list-style:none;
-		line-height:1.6em;
-		width:100%;
-		position: -webkit-sticky;
-		position: sticky;
-		top: 2px;
-		}
-
-	.menu li{
-		margin:5px 0;
-	}
-	
-	.menu li a{
-	  color:#FFF;
-		background-color:#009999;
-		padding:12px 10px 8px 20px;
-		display:block;
+		z-index: 90;
 	}
 
-	.menu li a:hover{
-	color:#FFF;
-	background-color:#44cccc;
-	display:block;
+	#menu ul {
+		margin: 3rem 0;
 	}
 
-	ul.sub{
-	  margin: 0 0 0 25px;
+	#menu nav a {
+		text-decoration: none;
+		display: block;
+		background: rgba(0,0,0,0.5);
+		border: 1px solid rgba(255,255,255,0.9);
+		color: #fff;
+		padding: 1rem;
+		margin: 0.5rem 0;
+		border-radius: 5px;	/*角を丸くする指定*/
 	}
 
-	.sub li a{
-	  color:#009999;
-		background-color:#FFF;
-		padding:0;
-		display:block;
+	#menu nav a:hover {
+		background: rgba(0,0,0,0.9);
 	}
-
-	.sub li a:hover{
-	  color:#aaa;
-	  background-color:#FFF;
-		}
-		
 }
 
-@media screen and (max-width:540px) {
-	.wrap {
+/*画面幅が880未満--------------------------------------*/
+@media screen and (max-width:880px) {
+	/* メニューを閉じた状態 */
+	.menu-btn {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		display: flex;
+		height: 60px;
+		width: 60px;
+		justify-content: center;
+		align-items: center;
+		z-index: 90;
+		background-color: rgba(0,0,0,0.5);
+	}
+	.menu-btn span,
+	.menu-btn span:before,
+	.menu-btn span:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 25px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		position: absolute;
+	}
+	.menu-btn span:before {
+		bottom: 8px;
+	}
+	.menu-btn span:after {
+		top: 8px;
+	}
+
+	#menu-btn-check:checked ~ .menu-btn span {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	/* メニューを開いた状態 */
+	.menu {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 100%;/*leftの値を変更してメニューを画面外へ*/
+		z-index: 80;
+		background: rgba(0,0,0,0.5);
+		transition: all 0.5s;/*アニメーション設定*/
+	}
+	.menu ul {
+		padding: 70px 10px 0;
+	}
+	.menu ul li {
+		border-bottom: solid 1px #ffffff;
+		list-style: none;
+	}
+	.menu ul li a {
+		display: block;
+		width: 100%;
+		font-size: 15px;
+		box-sizing: border-box;
+		color:#ffffff;
+		text-decoration: none;
+		padding: 10px 15px 10px 6px;
+		position: relative;
+	}
+	.menu ul li a::before {
+		content: "";
+		width: 7px;
+		height: 7px;
+		border-top: solid 2px #ffffff;
+		border-right: solid 2px #ffffff;
+		transform: rotate(45deg);
+		position: absolute;
+		right: 11px;
+		top: 16px;
+	}
+	.menu ul li a:hover {
+		background: rgba(0,0,0,0.8);
+	}
+
+	#menu-btn-check:checked ~ .menu {
+		left: 0;/*メニューを画面内へ*/
+	}
+
+	@media screen and (min-width:230px) {
+		/* 880px以下 */
+		.menu {
+			position: fixed;
+			width:220px;
+			padding:5px;
+			top: 0%;
+			right: 5%;
+		}
+	}
+	@media screen and (max-width:230px) {
+		/* 230px以下 */
+		.menu {
+			position: fixed;
+			width:100%;
+			margin: 0 auto;
+			top: 0px;
+			}
+	}
+}
+
+/*section*/
+/*---------------------------------------------------------------------------*/
+/*フェード設定*/
+.section::before {
+	opacity: 0; /* 初期状態では非表示 */
+	transition: opacity 1s; /* 1秒かけてフェードイン/フェードアウト */
+}
+.section.active::before {
+	opacity: 1; /* フェードイン状態 */
+}
+.section.inactive::before {
+	opacity: 0; /* フェードアウト状態 */
+}
+
+/*section要素*/
+section.row div.content {
+	padding-bottom: 100px;
+}
+/*一覧用*/
+section.row div.content ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+section.row div.content li {
+	margin: 5px 6px;
+}
+/* section.row div.content li:hover {
+	opacity: 0.7; */
+	/* background: #aaa; */
+	/* border-radius: 20px;
+} */
+
+@media screen and (min-width:880px) {
+	/*画面幅880px以上*/
+	section.row div.content ul li {
+		width: calc(25% - 20px); /* margin padding分を引く */
+	}
+}
+
+@media screen and (max-width:880px) {
+	@media screen and (min-width:660px) {
+		/*画面幅880px以下かつ660px以上*/
+		section.row div.content ul li {
+			width: calc(33.4% - 20px);
+		}
+	}
+
+	@media screen and (max-width:660px) {
+	@media screen and (min-width:380px) {
+		/*画面幅660px以下かつ380px以上*/
+		section.row div.content ul li {
+			width: calc(50% - 20px);
+		}
+	}
+
+	@media screen and (max-width:380px) {
+		/*画面幅380px以下*/
+		section.row div.content ul li {
+		width: 100%; 
+		}
+	}
+	}
+}
+
+
+section.row div.content li .thumb {
+	/* border: #aaa 1px solid; */
+	border-bottom: none;
+	border-radius: 20px 20px 0 0;
+}
+section.row div.content li .thumb a img {
+	width:100%;
+	border-radius: 20px 20px 0 0;
+}
+section.row div.content li .thumb a img:hover {
+	opacity: 0.7;
+}
+section.row div.content li .detail {
+	font-size: 0.9rem;
+	border: #aaa 1px solid;
+	border-top: none;
+	border-radius: 0 0 20px 20px;
+	padding: 5px 10px;
+}
+section.row div.content li .detail a {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+section.bg_eee {
+	background-color: #eee;
+}
+
+section div.content {
+	margin: 4% 4%;
+}
+
+/*４つのsectionブロックの共通設定*/
+#scenario,#welcome,#attention,#about {
+	min-height: calc(100dvh - 300px);
+	padding: 100px 0 100px 0;
+}
+
+#attention {
+	padding: 100px 0 180px 0;
+}
+#about {
+	margin: -80px 0 0 0;
+	background-color: #FFF;
+}
+/*画面幅880px以上*/
+@media screen and (min-width:880px) {
+
+	#scenario,#welcome,#attention,#about {
+		/* margin-top: 100px; */
+		border-radius: 10% 0 0 0;	/*角丸の指定。左上、右上、右下、左下*/
+	}
+
+}
+
+@media screen and (max-width:880px) {
+	#scenario {
+		padding: 200px 0 100px 0;
+	}
+}
+
+/*背景画像を置く為の設定*/
+#scenario,#welcome,#attention,#about {
+	content: '';
+	/* position: fixed; */
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/* height: 100%; */
+}
+
+.char {
+    opacity: 0;
+    animation: fadein 0.1s linear both;
+}
+
+@media screen and (min-width:880px) {
+	/* 880px以上 */
+	section {
+		animation: fadein-section linear both;
+		animation-timeline: view();
+		animation-range: entry 10% cover 40%;
+	}
+	@keyframes fadein-section {
+		from {
+			opacity: 0;
+			clip-path: inset(45% 0% 45% 80%);
+		  }
+		
+		  to {
+			opacity: 1;
+			clip-path: inset(0% 0% 0% 0%);
+		  }
+	  }
+}
+
+@media screen and (min-width:880px) {
+		/* 880px以上 */
+	.container {
+		/* max-width:880px; */
+		margin:0px auto;
+	}
+	
+}
+
+@media screen and (max-width:880px) {
+	.container {
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		}
-	
-	.navi {
-		width:100%;
-		margin: 0 auto;
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0px;
-		}
 
-		.contents {
-		width:99%;
-		margin: 0 auto;
-		}
-		
-	/* メニュー部分の設定 */
-	.menu{
-		text-align:left;
-		list-style:none;
-		line-height:1.6em;
-		width:100%;
-		display: flex;
-	}
-
-	.menu li{
-		margin:0;
-		flex:1;
-	}
-
-	.menu li a{
-		color:#FFF;
-		background-color:#009999;
-		padding:10px;
-		display:block;
-		text-align:center;
-	}
-
-	.menu li a:hover{
-		color:#FFF;
-		background-color:#44cccc;
-		display:block;
-	}
-
-	ul.sub{
-		display:none;
-	}
 
 }
+
+/* 上へスクロール */
+
+#page_top{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: #666;
+	opacity: 0.6;
+  }
+  
+  #page_top a{
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+  }
+  
+  #page_top a:hover{
+	background: #aaa;
+	opacity: 0.8;
+  }
+  
+  #page_top a::before{
+	content: '▲';
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+  }
