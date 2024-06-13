@@ -5,9 +5,18 @@ html {
 body {
   color : #000;  /* 文字色 */
   background-color : #FFF;  /* 背景色 */
-  font-size : 14px;  /* 文字の大きさ */
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width:660px) {
+	body {
+	font-size : 14px;  /* 文字の大きさ */
+	}
+}
+@media screen and (max-width:660px) {
+	body {
+	font-size : 10px;  /* 文字の大きさ */
+	}
 }
 
 ul,li {
@@ -317,7 +326,7 @@ section.row div.content ul {
 }
 
 section.row div.content li {
-	margin: 5px 6px;
+	margin: 5px 5px;
 }
 /* section.row div.content li:hover {
 	opacity: 0.7; */
@@ -328,7 +337,7 @@ section.row div.content li {
 @media screen and (min-width:880px) {
 	/*画面幅880px以上*/
 	section.row div.content ul li {
-		width: calc(25% - 20px); /* margin padding分を引く */
+		width: calc(25% - 10px); /* margin padding分を引く */
 	}
 }
 
@@ -336,7 +345,7 @@ section.row div.content li {
 	@media screen and (min-width:660px) {
 		/*画面幅880px以下かつ660px以上*/
 		section.row div.content ul li {
-			width: calc(33.4% - 20px);
+			width: calc(33.3333% - 10px);
 		}
 	}
 
@@ -344,7 +353,7 @@ section.row div.content li {
 	@media screen and (min-width:380px) {
 		/*画面幅660px以下かつ380px以上*/
 		section.row div.content ul li {
-			width: calc(50% - 20px);
+			width: calc(50% - 10px);
 		}
 	}
 
@@ -371,15 +380,19 @@ section.row div.content li .thumb a img:hover {
 	opacity: 0.7;
 }
 section.row div.content li .detail {
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	border: #aaa 1px solid;
 	border-top: none;
 	border-radius: 0 0 20px 20px;
 	padding: 5px 10px;
 }
 section.row div.content li .detail a {
-	font-size: 1.2rem;
+	/* font-size: 1.1rem; */
 	font-weight: bold;
+}
+
+.detail-ex {
+ display: none;
 }
 
 section.bg_eee {
