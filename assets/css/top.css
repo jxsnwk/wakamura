@@ -334,47 +334,51 @@ section.row div.content li {
 	/* border-radius: 20px;
 } */
 
-@media screen and (min-width:880px) {
-	/*画面幅880px以上*/
+/*一覧要素*/
+/*---------------------------------------------------------------------------*/
+/*画面幅1100px以上*/
+@media screen and (min-width:1100px) {
 	section.row div.content ul li {
-		width: calc(25% - 10px); /* margin padding分を引く */
+		width: calc(20% - 10px); /* margin padding分を引く */
 	}
 }
 
-@media screen and (max-width:880px) {
-	@media screen and (min-width:660px) {
-		/*画面幅880px以下かつ660px以上*/
-		section.row div.content ul li {
-			width: calc(33.3333% - 10px);
-		}
-	}
-
-	@media screen and (max-width:660px) {
-	@media screen and (min-width:380px) {
-		/*画面幅660px以下かつ380px以上*/
-		section.row div.content ul li {
-			width: calc(50% - 10px);
-		}
-	}
-
-	@media screen and (max-width:380px) {
-		/*画面幅380px以下*/
-		section.row div.content ul li {
-		width: 100%; 
-		}
-	}
+/*画面幅1100以下かつ880px以上*/
+@media screen and (max-width:1100px) and (min-width:880px) {
+	section.row div.content ul li {
+		width: calc(25% - 10px);
 	}
 }
 
+/*画面幅880px以下かつ660px以上*/
+@media screen and (max-width:880px) and (min-width:660px) {
+	section.row div.content ul li {
+		width: calc(33.3333% - 10px);
+	}
+}
+
+/*画面幅660px以下かつ380px以上*/
+@media screen and (max-width:660px) and (min-width:380px) {
+	section.row div.content ul li {
+		width: calc(50% - 10px);
+	}
+}
+
+/*画面幅380px以下*/
+@media screen and (max-width:380px) {
+	section.row div.content ul li {
+	width: 100%; 
+	}
+}
 
 section.row div.content li .thumb {
 	/* border: #aaa 1px solid; */
 	border-bottom: none;
-	border-radius: 20px 20px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 section.row div.content li .thumb a img {
 	width:100%;
-	border-radius: 20px 20px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 section.row div.content li .thumb a img:hover {
 	opacity: 0.7;
@@ -383,7 +387,7 @@ section.row div.content li .detail {
 	font-size: 0.8rem;
 	border: #aaa 1px solid;
 	border-top: none;
-	border-radius: 0 0 20px 20px;
+	border-radius: 0 0 10px 10px;
 	padding: 5px 10px;
 }
 section.row div.content li .detail a {
