@@ -391,10 +391,10 @@ hr.dashline{
 }
 .licence:before {
 	white-space: pre-wrap;
-	content:"本シナリオは、「株式会社アークライト」及び「株式会社KADOKAWA」が権利を有する『クトゥルフ神話TRPG』の二次創作物です。\A"
-	"Call of Cthulhu is copyright (C)1981, 2015, 2019 by Chaosium Inc. ;all rights reserved. Arranged by Arclight Inc.\A"
+	content:"本作は、「株式会社アークライト」及び「株式会社KADOKAWA」が権利を有する『クトゥルフ神話TRPG』シリーズの二次創作物です。\A"
+	"Call of Cthulhu is copyright ©1981, 2015, 2019 by Chaosium Inc. ;all rights reserved. Arranged by Arclight Inc.\A"
 	"Call of Cthulhu is a registered trademark of Chaosium Inc.\A"
-	"PUBLISHED BY KADOKAWA CORPORATION";
+	"PUBLISHED BY KADOKAWA CORPORATION　「クトゥルフ神話TRPG」「新クトゥルフ神話TRPG」\A";
 }
 
 /* ルビ */
