@@ -30,7 +30,7 @@ list-style-positioninside;
 margin0px 0px 0px 15px;
 } 
 
- 画像のボーダーをあらかじめ０にする 
+ 画像のボーダーをあらかじめ0にする 
 img{bordernone;}
 
  フォーム関連の設定 
@@ -75,7 +75,7 @@ list-style-position:inside;
 margin:0px 0px 0px 15px;
 } 
 
-/* 画像のボーダーをあらかじめ０にする */
+/* 画像のボーダーをあらかじめ0にする */
 img{border:none;}
 
 /* フォーム関連の設定 */

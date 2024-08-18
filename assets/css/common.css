@@ -1,3 +1,19 @@
+@charset "UTF-8";
+/* 文字色 */
+body {
+  --main: #333;
+  --sub: #666;
+  --title: #000;
+  --link-hover: #aaa;
+  --bg0: #FFF;
+  --bg1: #f4f4f4;
+  --bg2: #eee;
+  --bg3: #fafafa;
+  --border1: #aaa;
+  --border2: #FFF;
+  --border3: #ccc;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -5,7 +21,7 @@ html {
 /* 全体の設定 */
 body,td,th{
 font-size:14px;
-color:#666;
+color: var(--main);
 font-weight:normal;
 line-height:1.6em;
 margin:0px;
@@ -21,16 +37,16 @@ ul,li {
 
 /* リンクの設定 */
 a {text-decoration:none;}
-a:link{text-decoration:none;color:#66aaaa;}
-a:visited{text-decoration:none;color:#66aaaa;}
-a:hover{text-decoration:none;color : #ccc;}
+a:link{text-decoration:underline; color:var(--main);}
+a:visited{text-decoration:none; color:var(--main);}
+a:hover{text-decoration:none; color : var(--sub);}
 
 /* リスト設定  */
 ul,ol{
 list-style-position:inside;
 } 
 
-/* 画像のボーダーをあらかじめ０にする */
+/* 画像のボーダーをあらかじめ0にする */
 img{
 	max-width: 100%;
 	border:none;
@@ -47,27 +63,10 @@ line-height:17px;
 padding:5px;
 }
 textarea,input{
-color:#666;
+color: var(--main);
 border:1px solid #aaa;
 background-color:#FFF;
 }
-
-/* 装飾用box */
-.box1{
-border:2px solid #66aaaa;
-background-color:#FFF;
-}
-.box2{
-background-color:#eeeedd;
-}
-.box3{
-background-color:#eeeeee;
-}
-.box4{
-border:1px solid #66aaaa;
-background-color:#FFF;
-}
-.box1,.box2,.box3,.box4{padding:5px 5px 5px 10px;}
 
 .tab1,td{
 font-size:12px;
@@ -75,7 +74,11 @@ border:1px solid #aaa;
 }
 
 /* デザイン全般設定 */
-.ta1{border-left:17px solid #eeeeee;border-right:17px solid #eeeeee;}
+.ta1{
+	border-left:17px solid #eee;
+	border-right:17px solid #eee;
+}
+
 .back{
 text-align:right;
 border-top:1px solid #cccccc;
@@ -83,74 +86,139 @@ margin:20px 5px;
 padding:2px 5px;
 }
 
-/* 見出し設定 */
-h1{
-	font-size:14px;
+span.skill {
+	background-color: #aaa;
+	color: var(--bg0);
+	display: inline-block;
+	letter-spacing: 2px;
+	margin:0.8% 0.5% 0.8% 0;
+	padding:0.5% 0.8%;
 }
-header h1{
+
+/* 見出し設定 */
+header h1 {
 font-size:14px;
 font-weight:nomal;
-color:#336666;
+color:#333336;
 margin:5px 0 -10px 0;
 }
-h1:first-letter{color:#336666;}
-h2{
-font-size:16px;
-color:#666;
-border-top:1px solid #cccccc;
-border-bottom:2px solid #cccccc;
-width:98%;
-padding:4px 8px;
+header h1:first-letter {color:#333336;}
+
+/* 見出し設定 */
+h1, h2, h3, h4 {
+	color: var(--sub);
 }
-h3{
-font-size:14px;
-font-weight:nomal;
-color:#FFF;
-letter-spacing:2px;
-border-right:15px double #5f9ea0;
-background-color:#5f9ea0;
-width:270px;
-margin:5px 0px 5px 0px;
-padding:6px 10px;
+h1, h3, h4 {
+margin: 0 -5px 15px;
+}
+
+h1.center {
+	font-size: 20px;
+	border-top: 1px solid var(--bg0);
+	border-bottom: 2px solid var(--bg0);
+	margin: 10px 0;
+}
+
+h1 {
+font-size: 16px;
+border-top: 1px solid var(--border3);
+border-bottom: 2px solid var(--border3);
+padding: 4px 8px;
+}
+
+h2 {
+font-size: 16px;
+border-left: solid 3px var(--sub);
+border-bottom: solid 3px var(--bg1);
+padding: 4px 8px;
+margin: 15px -5px;
+}
+h2.bk {
+	background: var(--bg3);
+}
+
+h3 {
+font-size: 14px;
+padding: 5px;
+}
+
+h3:before {
+content: "▶︎";
+color: var(--border3);
+margin: 0 5px 0 0;
 }
 
 h4 {
-font-size:12px;
-font-weight:nomal;
-color: #fff;
-background-color: #009999;
-display: inline-block;
+border-right: 15px double var(--border3);
+background-color: var(--bg0);
+padding: 6px 10px;
+width: 270px;
+-webkit-box-shadow: 1px 1px 3px var(--sub);
+		box-shadow: 1px 1px 3px var(--sub);
+}
+
+/* 装飾用box */
+.box1 {
+background-color: var(--bg1);
+}
+
+.box2 {
+background-color: #f1f7fc;
+}
+
+.box3 {
+background-color: var(--bg0);
+border: solid 1px var(--bg1);
+}
+
+.box1, .box2, .box3, .box4 {
+padding: 10px 15px;
+margin: 5px 0;
+}
+
+/* 装飾boxのタグ */
+.tg, .tips, .dep {
 position: relative;
-font-weight: bold;
-letter-spacing: 1px;
-min-width: 100px;
-margin: 0 5px 5px -5px;
-padding: 2px 18px 2px 10px;
+margin: 1.4rem 0 0;
 }
 
-h4::before,h4::after {
-content: '';
+.tg:after, .tips:after, .dep:after {
 position: absolute;
+font-weight: 900;
+background: var(--sub);
+color: var(--bg0);
+left: 0px;
+bottom: 100%;
+border-radius: 5px 5px 0 0;
+padding: 5px 7px 3px;
+font-size: 0.7em;
+line-height: 1;
+letter-spacing: 0.05em;
 }
 
-h4::after {
-top: 0;right: 0;
-z-index: 2;
-border-width: 14px 10px;
-border-style: solid;
-border-color: transparent;
-border-right-color: #fff;
+.dep:after {
+content: '描写例';
+}
+.tg:after {
+content: 'KP向け補足';
+}
+.tips:after {
+content: '情報';
+}
+
+/* 装飾boxの角を丸める */
+.rd {
+border-radius: 10px;
 }
 
 k{
-
 font-weight:normal;
 background-color:#eee;
 }
 
 .mark{
-	background-color:#eee;
-	display:inline;
+background-color:#eee;
+display:inline;
 }
 
 m{
@@ -163,14 +231,15 @@ details{
 	margin: 0 0 0 5px;
 	}
 	.menu li{
-	color:#666;
+	color: var(--main);
 	}
 	
 .menu li a{
-color:#666;
-background-color:#eeeeee;
+color: var(--main);
+background-color:#eee;
 padding: 0 5px;
 }
+.menu li a:link{text-decoration:none;}
 	
 .menu li a:hover{
 color:#aaa;
@@ -285,6 +354,23 @@ hr.dashline{
 	padding:20px 0;
 }
 
+.center {
+	text-align: center;
+  }
+  
+  .left {
+	text-align: left;
+  }
+  
+  .right {
+	text-align: right;
+  }
+  
+  .small {
+	font-size: 8px;
+	line-height: 1.6em;
+  }
+
 /* 上へスクロール */
 
 #page_top{
@@ -293,7 +379,7 @@ hr.dashline{
   position: fixed;
   right: 0;
   bottom: 0;
-  background: #666;
+  background: #333;
   opacity: 0.6;
 }
 

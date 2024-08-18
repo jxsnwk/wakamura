@@ -407,7 +407,7 @@ section div.content {
 	margin: 4% 4%;
 }
 
-/*４つのsectionブロックの共通設定*/
+/*4つのsectionブロックの共通設定*/
 #scenario,#welcome,#attention,#about {
 	min-height: calc(100dvh - 300px);
 	padding: 100px 0 100px 0;
