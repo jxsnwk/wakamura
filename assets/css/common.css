@@ -104,6 +104,21 @@ margin:5px 0 -10px 0;
 }
 header h1:first-letter {color:#333336;}
 
+header .dash {
+	width:80%;
+	margin:auto;
+}
+.plinfo {
+	margin:20px auto;
+	width: 90%;
+}
+@media screen and (min-width:540px) {
+	/* 540px以上 */
+	.plinfo {
+		width:60%;
+	}
+}
+
 /* 見出し設定 */
 h1, h2, h3, h4 {
 	color: var(--sub);
@@ -117,6 +132,7 @@ h1.center {
 	border-top: 1px solid var(--bg0);
 	border-bottom: 2px solid var(--bg0);
 	margin: 10px 0;
+	line-height: 5em;
 }
 
 h1 {
