@@ -28,7 +28,7 @@ list-style: none;
 
 /* リンクの設定 */
 a {
-  color : #009999;  /* 文字色 */
+  color : #000000;  /* 文字色 */
   text-decoration : none;
 }
 a:hover{
@@ -60,6 +60,7 @@ h2{
 	font-weight: bold;
 	margin:0;
 	padding: 0 5px 5px;
+	font-family: "Yu Mincho","ヒラギノ明朝 ProN W3";
 }
 
 h3 {
@@ -393,6 +394,10 @@ section.row div.content li .detail {
 section.row div.content li .detail a {
 	/* font-size: 1.1rem; */
 	font-weight: bold;
+}
+.detail-title {
+	font-size: 1.1rem;
+	font-family: "Yu Mincho","ヒラギノ明朝 ProN W3";
 }
 
 .detail-ex {
