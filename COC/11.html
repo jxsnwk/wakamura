@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <meta name="description" content="CoC「全員N」世界終焉まであと5分。プレイ人数：１名　プレイ時間：音声で３時間程度　準推奨技能：《目星》《図書館》《オカルト》">
+  <meta name="description" content="CoC「全員N」世界終焉まであと5分。推奨人数：１名　プレイ時間：音声で３時間程度　準推奨技能：《目星》《図書館》《オカルト》">
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <script type="text/javascript" src="../../assets/js/common.js"></script>
@@ -45,7 +45,7 @@
    </ul>
  </div>
  
- <div class="contents">
+ <div class="contents" id="countTextarea">
  
   <div class="text">
     <div class="licence"></div>
@@ -75,11 +75,12 @@
       <br>
       <br>
       <h3>シナリオ概要（PL向け）</h3>
-      シナリオ名：全員N<br>
-      推奨人数：1名<br>
-      プレイ時間：3時間程度（ボイセ）<br>
-      推奨技能：特になし<br>
-      準推奨技能：目星・図書館・オカルト<br>
+      ・シナリオ名：全員N<br>
+      ・推奨人数：1名<br>
+      ・プレイ時間：3時間程度（ボイスセッション）<br>
+      ・本文：<span id="countResult"></span><br>
+      ・推奨技能：特になし<br>
+      ・準推奨技能：目星・図書館・オカルト<br>
       （準推奨技能は、使いどころがある・初期値でもクリアには困らない技能）
       <br>
       <br>
@@ -1104,7 +1105,7 @@ KPは任意のタイミングで探索者を佐藤と遭遇させる。（凪阿
 幼馴染NPCはやり切れなさそうに、やるせなさそうに、怒っている様子である。<br>
 </div>
 ※KP情報<br>
-探索者には、幼馴染NPCを何かしら説得するように促すこと。交渉技能を試みても良い。<br>
+探索者には、幼馴染NPCを何かしら説得するように促すこと。交渉系技能を試みても良い。<br>
 幾らかの会話の後、幼馴染NPCは心中を了承する。<br>
 <br>
 <br>
@@ -1134,7 +1135,7 @@ KPは任意のタイミングで探索者を佐藤と遭遇させる。（凪阿
   見るからに、素直には乗りそうにない様子だ。<br>
 </div>
 <br>
-▼何かしらの交渉技能に成功<br>
+▼何かしらの交渉系技能に成功<br>
 泣き喚き、文句を募られながら、渋々という様子で幼馴染NPCを乗せることができる。乗っている今も納得できていなさそうな様子で、ずっと探索者を見ている。納得できていなかろうと、ロケットは発射することになる。<br>
 →エンディング（ED2-2）<br>
 <br>

@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <meta name="description" content="CoC「壁の中にいる」視界を封じて、耳を澄ませて、手の先に集中して。　――さて、それは本当に壁だろうか？　推奨人数：1～2名　プレイ時間：1時間ほど　推奨技能：〈聞き耳〉">
+  <meta name="description" content="CoC「壁の中にいる」視界を封じて、耳を澄ませて、手の先に集中して。　――さて、それは本当に壁だろうか？　推奨人数：1～2名　プレイ時間：1時間程度　推奨技能：〈聞き耳〉">
+  <link rel="icon" href="/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="stylesheet" href="../../assets/css/scenario.css">
+  <script type="text/javascript" src="../../assets/js/common.js"></script>
 <TITLE>壁の中にいる｜WaKaMuRa - CoCシナリオ</TITLE>
 </head>
 <body>
@@ -23,7 +26,7 @@
   <br>
   ・システム：クトゥルフ神話TRPG（第6版）<br>
   ・推奨人数：1～2名<br>
-  ・プレイ時間：1時間ほど<br>
+  ・プレイ時間：1時間程度<br>
   ・推奨技能：〈聞き耳〉<br>
   <br>
   <br>
@@ -41,7 +44,7 @@
   <div class="navi">
       <ul class="menu" id="menu">
       <li><a href="#1">1．はじめに</a></li>
-      <li><a href="#2">2．KP向け情報(シナリオ背景)</a></li>
+      <li><a href="#2">2．KP向け情報</a></li>
       <li><a href="#3">3．主要NPC</a></li>
       <li><a href="#4">4．導入</a></li>
       <details>
@@ -65,7 +68,7 @@
   </div>
 
 
-<div class="contents">
+<div class="contents" id="countTextarea">
 <div class="text">
 <div class="text1">
   <div class="licence"></div>
@@ -78,7 +81,8 @@
 隠された真実を究明することを主旨とはせず、不可解な体験を楽しむ類の内容となっている。<br>
 <br>
 ・推奨人数：1～2名<br>
-・プレイ時間：1時間ほど<br>
+・プレイ時間：1時間程度<br>
+・本文：<span id="countResult"></span><br>
 ・推奨技能：〈聞き耳〉<br>
 <br>
   <div class="box2 tg">
@@ -118,22 +122,27 @@
 <br>
 <h1 id="3">3．主要NPC</h1>
 <h2>ツァトゥグア</h2>
+<div class="box3">
 今回は触り心地のよい壁役。<br>
 比較的無害、好きな食べ物はとり肉（という今回限りの勝手な設定）。<br>
 <br>
 具体的な能力値は基本P.220参照<br>
 正気度喪失：暗闇のため無しとする。少し不穏な空気を感じる程度<br>
+</div>
 <br>
 <br>
 <h2>無形の落とし子</h2>
+<div class="box3">
 今回は柔らかいようで硬い壁役。珍しく無害。<br>
 何も囁いてないあたりオフの日なのかもしれない。<br>
 <br>
 具体的な能力値はルルブP.193参照<br>
 正気度喪失：暗闇のため無しとする。少し異様な空気を感じる程度<br>
+</div>
 <br>
 <br>
 <h2>小鳥</h2>
+<div class="box3">
 迷い込んでしまった小鳥。<br>
 <br>
 能力値：<br>
@@ -144,6 +153,7 @@
 //DEX=10<br>
 耐久力　7<br>
 正気度喪失：なし<br>
+</div>
 <br>
 <h3>行動指針</h3>
 探索者への危険の警告役であり、箱の取得の妨害役である。時に犠牲となり、探索者の正気を喪失させるだろう。<br>
@@ -248,7 +258,7 @@
 <br>
 <h2 id="5-0-3">この空間での探索行動</h2>
 <h3>視界情報を必要とする行動</h3>
-・〈目星〉〈機械修理〉〈製作〉など<br>
+・<span class="skill">〈目星〉</span><span class="skill">〈機械修理〉</span><span class="skill">〈製作〉</span>など<br>
 視覚情報あってこその技能全般は自動失敗とする。<br>
 <br>
 <br>
@@ -675,7 +685,7 @@ STR対抗失敗時<br>
 <br>
 <br>
 <h1 id="7">7．クリア報酬</h1>
-KPが適当と思われる報酬を適宜追加・変更してください。<br>
+KPが適当と思われる報酬を適宜追加・変更していただきたい。<br>
 <br>
 ・最後までプレイした<br>
 1d6の正気度回復<br>

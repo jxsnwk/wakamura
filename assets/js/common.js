@@ -22,7 +22,10 @@ function rubyOff(){
 	setTimeout( function(){ document.body.className = c }, 100 );
 }
 
-function rubyOn(){
+function rubyOn(kakkoFlg=true){
+	const kakkoBefore = "("; // 前括弧
+	const kakkoAfter  = ")"; // 後括弧
+
 	var c = document.body.className;
 	if( c.match(/\s*rubyon/) ){ return }
 	var rubyOnHTML=new Array();
@@ -31,24 +34,32 @@ function rubyOn(){
 	// var rp = document.getElementsByTagName('rp');
 
 	// 元の値を保持
-    for(var i = 0; i < ruby.length; i++) {
+	for(var i = 0; i < ruby.length; i++) {
 		rubyOnHTML[i] = ruby[i].innerHTML;
 		rubyOnText[i] = ruby[i].innerText;
-	  }
-	// 括弧付きにしたい
-    for(var i = 0; i < ruby.length; i++) {
-		ruby[i].innerText = rubyOnHTML[i].replace(/<r[a-z]*>|<\/r[a-z]*>/g, "");
-	  }
+	  }
+
+	// ルビ情報を取得・整形
+	for(var i = 0; i < ruby.length; i++) {
+		if (kakkoFlg == false) {
+			// 括弧が不要な場合
+			kakkoBefore = "";
+			kakkoAfter  = "";
+		}
+		ruby[i].innerHTML = ruby[i].innerHTML.replace("<rt>", kakkoBefore) + kakkoAfter;
+		ruby[i].innerText = ruby[i].innerHTML.replace(/<r[a-z]*>|<\/r[a-z]*>/g, "");
+	  }
 
 	setTimeout( function(){ 
 		// 元の値に戻す
 		document.body.className = c
-	    for(var i = 0; i < ruby.length; i++) {
+		for(var i = 0; i < ruby.length; i++) {
 		ruby[i].innerText = rubyOnText[i];
 		ruby[i].innerHTML = rubyOnHTML[i];
-	  }
+	  }
 	}, 100 );
 }
+
 
 // 単語置換
 function changeWord() {
