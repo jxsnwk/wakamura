@@ -133,6 +133,7 @@ h1.center {
 	border-bottom: 2px solid var(--bg0);
 	margin: 10px 0;
 	line-height: 5em;
+	font-family: "Yu Mincho", "ヒラギノ明朝 ProN W3";
 }
 
 h1 {
