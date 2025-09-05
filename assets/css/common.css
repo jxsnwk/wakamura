@@ -217,7 +217,7 @@ letter-spacing: 0.05em;
 content: '描写例';
 }
 .tg:after {
-content: 'KP向け補足';
+content: '補足';
 }
 .tips:after {
 content: '情報';
@@ -502,3 +502,14 @@ hr.dashline{
 
 /* ルビ */
 .rubyoff rt,.rubyon rt{ display: none }
+
+
+/* アコーディオン */
+ul.accordion {
+  display: none; /* デフォルト非表示 */
+  margin-left: 1rem;
+}
+
+ul.accordion.open {
+  display: block; /* 開いたときに表示 */
+}

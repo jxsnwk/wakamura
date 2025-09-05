@@ -113,3 +113,24 @@ function clickCopyText() {
     }
 
 };
+
+
+// アコーディオン
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("li > a").forEach(anchor => {
+    anchor.addEventListener("click", (e) => {
+      const nextEl = anchor.nextElementSibling;
+      if (nextEl && nextEl.classList.contains("accordion")) {
+        if (nextEl.classList.contains("open")) {
+          // すでに開いている → 閉じる時だけ preventDefault
+          e.preventDefault();
+          nextEl.classList.remove("open");
+        } else {
+          // 開いていない → 通常リンク動作の後に開く
+          nextEl.classList.add("open");
+        }
+      }
+    });
+  });
+});
+
