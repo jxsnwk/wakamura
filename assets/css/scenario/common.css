@@ -185,7 +185,7 @@ background-color: #f1f7fc;
 
 .box3 {
 background-color: var(--bg0);
-border: solid 1px var(--bg1);
+border: solid 1px var(--border3);
 }
 
 .box1, .box2, .box3, .box4 {

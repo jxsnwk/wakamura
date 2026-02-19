@@ -74,7 +74,7 @@ h3 {
 	color: #FFF;
 	width: 100%;
 	/* background-color: #009999; */
-	background: url('../img/top/top.jpg') no-repeat center center / cover;
+	background: url('assets/img/top/top.jpg') no-repeat center center / cover;
 	animation: fadein 1s ease-out forwards;
 }
 @keyframes fadein {
